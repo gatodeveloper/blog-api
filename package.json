@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Nodejs Api for Blog API",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/server.js",
