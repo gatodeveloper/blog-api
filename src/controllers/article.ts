@@ -15,8 +15,7 @@ export const postArticle = async (req: Request, res: Response): Promise<void> =>
   const payload : IArticle = req.body;  
   
   try {
-    const newArticle = await Article.create(payload);  
-    console.log('newArticle', newArticle)
+    const newArticle = await Article.create(payload);      
     res.status(201).json(newArticle);
   } catch (err:any) {
     res.status(400).json({ message: err.message });
@@ -24,8 +23,7 @@ export const postArticle = async (req: Request, res: Response): Promise<void> =>
 };
 
 export const getArticle = async (req: Request, res: Response): Promise<void> => {
-  const slug : string  = req.params.slug;
-  console.log("====> slug", slug)
+  const slug : string  = req.params.slug; 
   try {
     const articles: IArticle[] | null = await Article.findOne({slug: slug});
     res.json(articles);
