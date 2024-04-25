@@ -8,7 +8,7 @@ import { configInit } from './config';
 
 dotenv.config();
 
-const PORT: number = parseInt(process.env.PORT as string);
+const PORT: number = parseInt(process.env.PORT as string) || 3000;
 const app: Application = express();
 
 configInit();

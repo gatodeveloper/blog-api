@@ -149,3 +149,4 @@ dist
 
 # APP
 /src/data
+.vercel
